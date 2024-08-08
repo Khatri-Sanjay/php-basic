@@ -11,7 +11,6 @@ if(isset($_POST['submit'])) {
 
     move_uploaded_file($file_tmp,"../images/".$file_name);  
 
-        // $sqlquery = "INSERT INTO student SET name=$name, address=$address";
         $sqlquery = "INSERT INTO student (name, address, district, image) VALUES ('$name', '$address','$district','$file_name')";
 
         echo $sqlquery;
